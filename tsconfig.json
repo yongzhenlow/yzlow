@@ -18,7 +18,9 @@
       "@store/*": [
         "src/store/*"
       ],
-    }
+    },
+    "noUnusedLocals": true,
+    "importsNotUsedAsValues": "error"
   },
   "types": [
     "@astrojs/image/client",
