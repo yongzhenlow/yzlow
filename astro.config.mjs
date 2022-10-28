@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 import image from '@astrojs/image';
 
-// https://astro.build/config
+/** @type {import('astro').AstroUserConfig} */
 export default defineConfig({
+  site: 'https://www.yzlow.com',
   integrations: [
     image({
       serviceEntryPoint: '@astrojs/image/sharp',
