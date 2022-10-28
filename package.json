@@ -20,6 +20,7 @@
     "@tryghost/content-api": "^1.11.4",
     "@tryghost/helpers": "^1.1.74",
     "nanostores": "^0.7.0",
-    "probe-image-size": "^7.2.3"
+    "probe-image-size": "^7.2.3",
+    "sharp": "^0.31.1"
   }
 }
