@@ -2,7 +2,6 @@
 import { settings } from '@store/settings';
 import themeConfig from '@utils/theme.config';
 import Navigation from '@components/Navigation.astro';
-import IconSearch from '@components/icons/IconSearch.astro';
 import IconFacebook from '@components/icons/IconFacebook.astro';
 import IconTwitter from '@components/icons/IconTwitter.astro';
 import type { Nullable } from '@tryghost/content-api';
@@ -102,9 +101,6 @@ const accentColorStyleTag =
               }
             </a>
             <div class="gh-head-brand-wrapper">
-              <button class="gh-search" data-ghost-search>
-                <IconSearch />
-              </button>
               <a class="gh-burger" role="button">
                 <div class="gh-burger-box">
                   <div class="gh-burger-inner"></div>
@@ -120,9 +116,6 @@ const accentColorStyleTag =
             }
           </div>
           <div class="gh-head-actions">
-            <button class="gh-search" data-ghost-search>
-              <IconSearch />
-            </button>
             <div class="gh-social">
               {
                 settings.facebook && (
@@ -213,6 +206,5 @@ const accentColorStyleTag =
     <script
       src="https://cdn.jsdelivr.net/combine/npm/ghost@5.12.0/core/frontend/src/cards/js/audio.min.js,npm/ghost@5.12.0/core/frontend/src/cards/js/before-after.min.js,npm/ghost@5.12.0/core/frontend/src/cards/js/gallery.min.js,npm/ghost@5.12.0/core/frontend/src/cards/js/toggle.min.js,npm/ghost@5.12.0/core/frontend/src/cards/js/video.min.js"
     ></script>
-    <div id="sodo-search-root"></div>
   </body>
 </html>
