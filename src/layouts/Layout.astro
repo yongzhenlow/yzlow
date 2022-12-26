@@ -29,7 +29,9 @@ const { title, description, bodyClass, codeInjectionHead, codeInjectionFoot } =
 const accentColorStyleTag =
   settings.accent_color &&
   `<style>:root {--ghost-accent-color: ${settings.accent_color};}</style>`;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+  .toString()
+  .replace(/\/$/, '');
 ---
 
 <!DOCTYPE html>

@@ -7,7 +7,13 @@ export const get: APIRoute = async ({ params }) => {
   const raw = await res.text();
   const body = raw
     .replaceAll(apiURL.href, siteURL.href)
-    .replaceAll(apiURL.host, siteURL.host);
+    .replaceAll(apiURL.host, siteURL.host)
+    .replaceAll(
+      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g,
+      (url) => {
+        return url.replace(/\/$/, '');
+      }
+    );
 
   return new Response(body, {
     status: 200,
