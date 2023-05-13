@@ -17,10 +17,12 @@
       ],
       "@store/*": [
         "src/store/*"
-      ],
+      ]
     },
     "noUnusedLocals": true,
-    "importsNotUsedAsValues": "error"
+    "verbatimModuleSyntax": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
   "types": [
     "@astrojs/image/client",

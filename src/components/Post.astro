@@ -8,6 +8,7 @@ import IconFire from '@components/icons/IconFire.astro';
 import IconAvatar from '@components/icons/IconAvatar.astro';
 import RemotePicture from '@components/RemotePicture.astro';
 import dateFormat from '@utils/date-format';
+import Comments from '@components/Comments';
 
 export interface Props {
   post: PostOrPage;
@@ -134,7 +135,11 @@ const morePosts = await ghostClient.posts.browse({
       }
     </header>
 
-    <section class="gh-content gh-canvas" set:html={post.html}></section>
+    <section class="gh-content gh-canvas" set:html={post.html} />
+
+    <aside class="article-comments gh-canvas">
+      <Comments client:only="react" />
+    </aside>
   </article>
 </main>
 
@@ -149,3 +154,12 @@ const morePosts = await ghostClient.posts.browse({
     </aside>
   )
 }
+
+<style is:global>
+  /* workaround for astro islands generating css for client: functionality
+  css generated astro-island,astro-slot{display:contents} */
+  .article-comments astro-island,
+  .article-comments astro-slot {
+    display: block !important;
+  }
+</style>
