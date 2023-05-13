@@ -1,9 +1,9 @@
 ---
 import type { Params, PostOrPage } from '@tryghost/content-api';
-import ghostClient from '@utils/ghost-client';
-import Layout from '@layouts/Layout.astro';
-import Page from '@components/Page.astro';
-import Post from '@components/Post.astro';
+import ghostClient from '@/utils/ghost-client';
+import Layout from '@/layouts/Layout.astro';
+import Page from '@/components/Page.astro';
+import Post from '@/components/Post.astro';
 
 /** @todo combine missing typed params altogether, seems like PostOrPage is missing some properties from response */
 interface PostOrPageMissingParams {

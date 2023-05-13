@@ -1,10 +1,10 @@
 ---
 import { readingTime } from '@tryghost/helpers';
-import themeConfig from '@utils/theme.config';
-import IconFire from '@components/icons/IconFire.astro';
-import RemotePicture from '@components/RemotePicture.astro';
-import type { PostOrPage } from 'types/ghost-content-api';
-import dateFormat from '@utils/date-format';
+import themeConfig from '@/utils/theme.config';
+import IconFire from '@/components/icons/IconFire.astro';
+import RemotePicture from '@/components/RemotePicture.astro';
+import type { PostOrPage } from '@/types/ghost-content-api';
+import dateFormat from '@/utils/date-format';
 
 export interface Props {
   post: PostOrPage;

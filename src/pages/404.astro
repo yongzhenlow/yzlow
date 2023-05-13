@@ -1,7 +1,7 @@
 ---
-import PostCard from '@components/PostCard.astro';
-import Layout from '@layouts/Layout.astro';
-import ghostClient from '@utils/ghost-client';
+import PostCard from '@/components/PostCard.astro';
+import Layout from '@/layouts/Layout.astro';
+import ghostClient from '@/utils/ghost-client';
 
 const morePosts = await ghostClient.posts.browse({
   limit: 3,

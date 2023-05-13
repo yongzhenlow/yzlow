@@ -1,14 +1,14 @@
 ---
 import type { PostOrPage } from '@tryghost/content-api';
 import { readingTime } from '@tryghost/helpers';
-import ghostClient from '@utils/ghost-client';
-import themeConfig from '@utils/theme.config';
-import PostCard from '@components/PostCard.astro';
-import IconFire from '@components/icons/IconFire.astro';
-import IconAvatar from '@components/icons/IconAvatar.astro';
-import RemotePicture from '@components/RemotePicture.astro';
-import dateFormat from '@utils/date-format';
-import Comments from '@components/Comments';
+import ghostClient from '@/utils/ghost-client';
+import themeConfig from '@/utils/theme.config';
+import PostCard from '@/components/PostCard.astro';
+import IconFire from '@/components/icons/IconFire.astro';
+import IconAvatar from '@/components/icons/IconAvatar.astro';
+import RemotePicture from '@/components/RemotePicture.astro';
+import dateFormat from '@/utils/date-format';
+import Comments from '@/components/Comments';
 
 export interface Props {
   post: PostOrPage;

@@ -1,9 +1,9 @@
 ---
 import type { Tag } from '@tryghost/content-api';
-import PostCard from '@components/PostCard.astro';
-import RemotePicture from '@components/RemotePicture.astro';
-import Layout from '@layouts/Layout.astro';
-import ghostClient from '@utils/ghost-client';
+import PostCard from '@/components/PostCard.astro';
+import RemotePicture from '@/components/RemotePicture.astro';
+import Layout from '@/layouts/Layout.astro';
+import ghostClient from '@/utils/ghost-client';
 
 export interface Props {
   tag: Tag;

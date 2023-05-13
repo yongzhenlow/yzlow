@@ -1,12 +1,12 @@
 ---
 import type { Author } from '@tryghost/content-api';
-import type { PostsOrPages } from 'types/ghost-content-api';
-import IconFacebook from '@components/icons/IconFacebook.astro';
-import IconTwitter from '@components/icons/IconTwitter.astro';
-import PostCard from '@components/PostCard.astro';
-import RemotePicture from '@components/RemotePicture.astro';
-import Layout from '@layouts/Layout.astro';
-import ghostClient from '@utils/ghost-client';
+import type { PostsOrPages } from '@/types/ghost-content-api';
+import IconFacebook from '@/components/icons/IconFacebook.astro';
+import IconTwitter from '@/components/icons/IconTwitter.astro';
+import PostCard from '@/components/PostCard.astro';
+import RemotePicture from '@/components/RemotePicture.astro';
+import Layout from '@/layouts/Layout.astro';
+import ghostClient from '@/utils/ghost-client';
 
 interface Props {
   author: Author;

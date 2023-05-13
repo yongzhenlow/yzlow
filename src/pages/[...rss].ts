@@ -1,4 +1,4 @@
-import ghostClient from '@utils/ghost-client';
+import ghostClient from '@/utils/ghost-client';
 import type { APIRoute } from 'astro';
 
 export const get: APIRoute = async ({ params }) => {

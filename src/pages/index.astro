@@ -1,10 +1,10 @@
 ---
-import PostCard from '@components/PostCard.astro';
-import { settings } from '@store/settings';
-import themeConfig from '@utils/theme.config';
-import ghostClient from '@utils/ghost-client';
-import Layout from '@layouts/Layout.astro';
-import type { PostsOrPages } from 'types/ghost-content-api';
+import PostCard from '@/components/PostCard.astro';
+import { settings } from '@/store/settings';
+import themeConfig from '@/utils/theme.config';
+import ghostClient from '@/utils/ghost-client';
+import Layout from '@/layouts/Layout.astro';
+import type { PostsOrPages } from '@/types/ghost-content-api';
 
 const posts: PostsOrPages = await ghostClient.posts.browse({
   limit: 'all',

@@ -1,6 +1,6 @@
 import type { Nullable, Settings } from '@tryghost/content-api';
 import { atom } from 'nanostores';
-import ghostClient from '@utils/ghost-client';
+import ghostClient from '@/utils/ghost-client';
 
 interface SettingsMissingParams {
   accent_color?: Nullable<string>;
