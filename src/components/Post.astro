@@ -7,7 +7,6 @@ import PostCard from '@/components/PostCard.astro';
 import IconFire from '@/components/icons/IconFire.astro';
 import IconAvatar from '@/components/icons/IconAvatar.astro';
 import RemotePicture from '@/components/RemotePicture.astro';
-import dateFormat from '@/utils/date-format';
 import Comments from '@/components/Comments';
 
 export interface Props {
@@ -103,15 +102,8 @@ const morePosts = await ghostClient.posts.browse({
               }
             </h4>
             <div class="byline-meta-content">
-              {
-                post.published_at && (
-                  <span class="byline-meta-date">
-                    {dateFormat(new Date(post.published_at))}
-                  </span>
-                )
-              }
-              <span class="byline-reading-time"
-                ><span class="bull">&bull;</span> {readingTime(post)}
+              <span class="byline-reading-time">
+                {readingTime(post)}
               </span>
             </div>
           </div>

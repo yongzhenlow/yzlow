@@ -4,7 +4,6 @@ import themeConfig from '@/utils/theme.config';
 import IconFire from '@/components/icons/IconFire.astro';
 import RemotePicture from '@/components/RemotePicture.astro';
 import type { PostOrPage } from '@/types/ghost-content-api';
-import dateFormat from '@/utils/date-format';
 
 export interface Props {
   post: PostOrPage;
@@ -75,13 +74,6 @@ const { post, index = 0 } = Astro.props;
     </a>
 
     <footer class="post-card-meta">
-      {
-        post.published_at && (
-          <div class="post-card-meta-date">
-            {dateFormat(new Date(post.published_at))}
-          </div>
-        )
-      }
       <span class="post-card-meta-length">{readingTime(post)}</span>
     </footer>
   </div>
